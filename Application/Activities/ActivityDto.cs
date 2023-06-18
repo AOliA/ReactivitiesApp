@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Application.Comments;
 using Application.Profiles;
 
 namespace Application.Activities
@@ -16,5 +17,6 @@ namespace Application.Activities
         public string HostUsername { get; set; }
         public bool IsCancelled { get; set; }
         public ICollection<AttendeeDto> Attendees { get; set; }
+        public ICollection<CommentDto> Comments { get; set; }
     }
 }
