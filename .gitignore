@@ -477,6 +477,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+API/appsettings.json
 
 # Build files
 wwwroot/
