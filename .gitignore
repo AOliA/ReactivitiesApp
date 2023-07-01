@@ -481,3 +481,4 @@ API/appsettings.json
 
 # Build files
 wwwroot/
+docker-compose.yml
