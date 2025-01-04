@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:7.0.302 AS build-env
 WORKDIR /app
 EXPOSE 8080
 
@@ -12,10 +12,9 @@ COPY "Infrastructure/Infrastructure.csproj" "Infrastructure/Infrastructure.cspro
 
 RUN dotnet restore "Reactivities.sln"
 
-# copy everything else build
+# copy everything else and build
 COPY . .
-WORKDIR /app
-RUN dotnet publish -c Release -o out
+RUN dotnet publish Reactivities.sln -c Release -o out
 
 # build a runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
